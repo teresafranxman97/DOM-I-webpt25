@@ -43,6 +43,9 @@ logo.src = siteContent["nav"]["img-src"];
 
 // Adding nav items
 const nav = document.querySelector('nav');
+nav.style.borderBottom = '2px solid lightgrey';
+
+
 const navItem = document.querySelectorAll('a')
   navItem[0].textContent = siteContent["nav"]["nav-item-1"];
   navItem[1].textContent = siteContent["nav"]["nav-item-2"];
@@ -55,6 +58,7 @@ navItem.forEach((item) => {
   item.style.color = "green"
 });
 
+
 const newNavItem = document.createElement('a'); // Created new nav item + appended new item to nav
   newNavItem.textContent = "Our Team";
   newNavItem.style.color = "green";
@@ -63,15 +67,19 @@ const newNavItem = document.createElement('a'); // Created new nav item + append
 const newNavItem2 = document.createElement('a'); // Created new nav item + appended new item to nav
   newNavItem2.textContent = "Charity";
   newNavItem2.style.color = "green";
-  document.querySelector("nav").appendChild(newNavItem2);   
+  document.querySelector("nav").prepend(newNavItem2);   
 
 // Adding h1 
 const hOne = document.querySelector('h1');
 hOne.textContent = siteContent["cta"]["h1"];
 
+
 // Adding Button 
 const button = document.querySelector('button');
 button.textContent = siteContent["cta"]["button"];
+button.style.color = 'green';
+button.style.fontWeight = 'bolder';
+button.style.borderRadius = '15px';
 
 // Adding header img 
 const headerImg = document.getElementById("cta-img");
@@ -92,6 +100,10 @@ const addHeaders = document.querySelectorAll('h4');
   addHeaders[4].textContent = siteContent["main-content"]["vision-h4"];
   addHeaders[5].textContent = siteContent["contact"]["contact-h4"];
 
+addHeaders.forEach((item) => {
+  item.style.fontSize = '22px';
+})  
+
 // PARAGRAPHS
 const addContent = document.querySelectorAll('p');
   addContent[0].textContent = siteContent["main-content"]["features-content"];
@@ -103,3 +115,4 @@ const addContent = document.querySelectorAll('p');
   addContent[6].textContent = siteContent["contact"]["phone"];
   addContent[7].textContent = siteContent["contact"]["email"];
   addContent[8].textContent = siteContent["footer"]["copyright"];
+  addContent[8].style.color = 'green';
